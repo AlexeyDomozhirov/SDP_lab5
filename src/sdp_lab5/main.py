@@ -40,6 +40,8 @@ url3 = 'https://gist.githubusercontent.com/zaryanezrya/8b4ef51c707cb16d5e88a44dc
 df3 = pd.read_csv(url3, sep=',', skipinitialspace=True)
 show(3, df3.head())
 
+df3.columns = df2.columns
+
 # Задание 4
 df = pd.concat([df2, df3], ignore_index=True).drop_duplicates()
 show(4, df.shape)
